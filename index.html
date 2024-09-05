@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Declaración del documento como HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Establece la codificación de caracteres del documento -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el documento sea responsive al adaptarse a diferentes anchos de pantalla -->
+    <title>Control de valores</title>
+    <!-- Título de la página web -->
+    <!-- Fuente de íconos de Font Awesome versión 4.7.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Preconexión a Google Fonts para mejorar el rendimiento al cargar las fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente "Lexend" de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Enlace a una hoja de estilo externa -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Contenedor principal de toda la estructura -->
+    <div class="container">
+
+        <!-- Contenedor del título -->
+        <div class="title-container">
+            <!-- Título principal con la fuente "Lexend-semibold" -->
+            <h1 class="lexend-semibold title">Slider de valores</h1>
+        </div>
+
+        <!-- Control deslizante para seleccionar un valor entre 5 y 20 -->
+        <!-- Se ejecuta la función 'updateCircle' cuando cambia el valor del slider -->
+        <input type="range" min="5" max="20" step="1" value="5" class="slider" id="Ktms" oninput="updateCircle(this.value)">
+
+        <!-- Contenedor del círculo que representa visualmente el valor del slider -->
+        <div class="circle-container">
+            <!-- Círculo donde se muestra el valor del slider -->
+            <div class="circle" id="circle">
+                <!-- Valor actual del slider mostrado en el centro del círculo -->
+                <output id="Kvaluetms" class="lexend-semibold value">5</output>
+            </div>
+        </div>
+
+        <!-- Contenedor del resultado que muestra el valor final -->
+        <div class="lexend-semibold result-container">
+            <!-- Etiqueta de texto para el resultado -->
+            <p class="resultado">Resultado</p>
+            <!-- Span donde se mostrará el resultado calculado o recibido desde el dispositivo -->
+            <span id="valor" class="lexend-medium valor">N/A</span>
+        </div>
+
+        <!-- Span donde se mostrará el valor de la variable TMS (para visualizar ecuaciones con MathJax) -->
+        <span id="TM" class="lexend-semibold TM">\[{TMS}\]</span>
+
+    </div>
+
+    <!-- Iconos de Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Particle API JS para interactuar con dispositivos Particle -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particle-api-js@8/dist/particle.min.js"></script>
+    <!-- FontAwesome para manejar iconos accesibles -->
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-a11y="true"></script>
+    <!-- jQuery, una librería popular de JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- D3.js para la manipulación de datos y generación de gráficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.0/d3.min.js"></script>
+    <!-- MathJax para renderizar expresiones matemáticas en el navegador -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Enlace al archivo JavaScript principal donde se manejará la lógica del slider y comunicación con Particle -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+* {
+    /* Aplica el modelo de caja `border-box` a todos los elementos para que el padding y borde se incluyan en el ancho y alto */
+    box-sizing: border-box;
+    /* Elimina el margen y el padding predeterminado de todos los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    /* Define que la altura y anchura del `html` y `body` ocupen el 100% de la pantalla */
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    /* Elimina el margen predeterminado */
+    margin: 0;
+    /* Establece la altura del cuerpo en 100% del viewport */
+    height: 100vh;
+    /* Utiliza flexbox para centrar los contenidos en el cuerpo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Alinea los elementos en dirección vertical (columna) */
+    flex-direction: column;
+    /* Cambia el color de fondo del cuerpo a un gris oscuro */
+    background-color: #222222;
+}
+
+.lexend-semibold {
+    /* Define la fuente como "Lexend" */
+    font-family: "Lexend", sans-serif;
+    /* Ajusta el tamaño óptico de la fuente de manera automática */
+    font-optical-sizing: auto;
+    /* Establece el peso de la fuente a 600 (semi-negrita) */
+    font-weight: 600;
+    /* Define el estilo de la fuente como normal (sin cursiva) */
+    font-style: normal;
+}
+
+.container {
+    /* Usa flexbox para centrar los elementos dentro del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Alinea los elementos en dirección vertical */
+    flex-direction: column;
+    /* Color de fondo gris claro para el contenedor */
+    background-color: #B0B0B0;
+    /* Añade padding alrededor del contenido del contenedor */
+    padding: 100px;
+    /* Bordes ligeramente redondeados */
+    border-radius: 10px;
+}
+
+.title {
+    /* Añade un margen inferior al título */
+    margin-bottom: 40px;
+    /* Cambia el color del texto a azul */
+    color: blue;
+}
+
+.slider {
+    /* Elimina el estilo predeterminado del control deslizante en navegadores WebKit */
+    -webkit-appearance: none;
+    /* Altura del control deslizante */
+    height: 14px;
+    /* Bordes redondeados para el control */
+    border-radius: 10px;
+    /* Espaciado inferior del control */
+    margin-bottom: 30px;
+    /* Pequeño padding interno en el control */
+    padding: .1em;
+    /* Fondo del control con un degradado lineal */
+    background: linear-gradient(#091218, #e9cb0e);
+    /* Color del texto del control */
+    color: yellow;
+    /* Ancho del control */
+    width: 180px;
+}
+
+.circle-container {
+    /* Posiciona el contenedor de forma relativa para ajustar los elementos dentro */
+    position: relative;
+    /* Define las dimensiones del contenedor del círculo */
+    width: 150px;
+    height: 150px;
+    /* Añade margen inferior al contenedor */
+    margin-bottom: 20px;
+}
+
+.circle {
+    /* El círculo ocupa el 100% del contenedor */
+    width: 100%;
+    height: 100%;
+    /* Hace el contenedor completamente circular */
+    border-radius: 50%;
+    /* Color de fondo gris claro */
+    background-color: lightgray;
+    /* Centra el contenido del círculo utilizando flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Posiciona el círculo de manera relativa */
+    position: relative;
+    /* Añade una sombra al círculo para dar efecto tridimensional */
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.value {
+    /* Color del texto dentro del círculo */
+    color: black;
+    /* Posiciona el valor de manera absoluta dentro del círculo */
+    position: absolute;
+    /* Tamaño de la fuente para el valor mostrado */
+    font-size: 1.5rem;
+    /* Peso de la fuente en negrita */
+    font-weight: bold;
+}
+
+.result-container {
+    /* Usa flexbox para centrar los elementos dentro del contenedor de resultados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Alinea los elementos en columna */
+    flex-direction: column;
+}
+
+.resultado {
+    /* Tamaño de la fuente para el texto del resultado */
+    font-size: 20px;
+    /* Margen inferior del texto del resultado */
+    margin-bottom: 10px;
+}
+
+.valor {
+    /* Color del valor mostrado en azul */
+    color: blue;
+}
+
+.TM {
+    /* Color del texto para la variable TM en negro */
+    color: black;
+    /* Posiciona el texto a cierta distancia desde la parte superior e izquierda (sin efecto notable aquí) */
+    top: 90px;
+    left: 200px;
+    /* Tamaño de la fuente para la variable TM */
+    font-size: 30px;
+}
